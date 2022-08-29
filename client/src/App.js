@@ -1,19 +1,23 @@
 import React from "react";
 import "./App.css";
-import Banner from "./Banner";
-import Feed from "./Feed";
-import Footer from "./Footer";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import SignUp from "./SignUp";
+// import LoginUi from "./LoginUi";
+// import Banner from "./Banner";
+// import Feed from "./Feed";
+// import Footer from "./Footer";
+// import Header from "./Header";
+// import Sidebar from "./Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Sidebar />
       <Feed />
       <Banner />
-      <Footer />
+      <Footer /> */}
+      {/* <LoginUi /> */}
+      <SignUp />
     </div>
   );
 }
