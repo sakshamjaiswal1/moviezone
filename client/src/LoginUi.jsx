@@ -3,6 +3,7 @@ import "./LoginUi.css";
 import profile from "./Album/a.png";
 import email from "./Album/email.jpg";
 import pass from "./Album/pass.png";
+import { Link } from "react-router-dom";
 
 function LoginUi() {
   return (
@@ -29,11 +30,11 @@ function LoginUi() {
             </div>
 
             <p className="link">
-              <a href="#">Forgot password ?</a>
+              <Link to="LoginUi">Forgot password ?</Link>
               <br />
 
               <br />
-              <a href="#">Sign Up</a>
+              <Link to="SignUp">Sign Up</Link>
             </p>
           </div>
         </div>
