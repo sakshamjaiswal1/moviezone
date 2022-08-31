@@ -18,7 +18,7 @@ function App() {
         <Feed />
         <Banner />
         <Switch>
-          <Route exact path="/LoginUi">
+          <Route path="/Login">
             <LoginUi />
           </Route>
           <Route path="/SignUp">

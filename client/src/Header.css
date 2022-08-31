@@ -69,12 +69,16 @@
   display: flex;
   margin-right: 10px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .header__login {
   display: flex;
   margin-right: 10px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .header__menuCon {

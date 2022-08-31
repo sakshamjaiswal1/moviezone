@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import Logo from "./MZ.png";
 import searchIcon from "./Album/searchIcon.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   console.log(searchIcon);
@@ -30,8 +31,12 @@ function Header() {
         <div className="header__location">
           <h3>India</h3>
         </div>
-        <h3 className="header__register">Register</h3>
-        <h3 className="header__login">Login</h3>
+        <Link to="/SignUp" className="header__register">
+         <h3> Sign Up </h3>
+        </Link>
+        <Link to="LoginUi" className="header__login">
+         <h3> Login </h3>
+        </Link>
 
         <div className="header__menuCon">
           <div className="header_menuBar"></div>
