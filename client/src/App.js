@@ -7,26 +7,23 @@ import Feed from "./Feed";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Header />
         <Sidebar />
-        <Feed />
+
         <Banner />
-        <Switch>
-          <Route path="/Login">
-            <LoginUi />
-          </Route>
-          <Route path="/SignUp">
-            <SignUp />
-            </Route> 
-        </Switch>
+        <Routes>
+          <Route path="/" exact element={<Feed />} />
+          <Route path="/login" element={<LoginUi />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
         <Footer />
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

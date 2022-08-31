@@ -31,10 +31,10 @@ function Header() {
         <div className="header__location">
           <h3>India</h3>
         </div>
-        <Link to="/SignUp" className="header__register">
+        <Link to="/signup" className="header__register">
          <h3> Sign Up </h3>
         </Link>
-        <Link to="LoginUi" className="header__login">
+        <Link to="/login" className="header__login">
          <h3> Login </h3>
         </Link>
 
