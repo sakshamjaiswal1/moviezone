@@ -16,12 +16,12 @@ function App() {
         <Header />
         <Sidebar />
 
-        <Banner />
         <Routes>
           <Route path="/" exact element={<Feed />} />
           <Route path="/login" element={<LoginUi />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
+        <Banner />
         <Footer />
       </BrowserRouter>
     </div>
