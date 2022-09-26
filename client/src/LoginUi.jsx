@@ -1,7 +1,7 @@
 import React from "react";
 import "./LoginUi.css";
 import profile from "./Album/a.png";
-import email from "./Album/email.jpg";
+import mail from "./Album/mail.jpg";
 import pass from "./Album/pass.png";
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function LoginUi() {
           <div>
             <h1>Login</h1>
             <div>
-              <img src={email} alt="email" className="email" />
+              <img src={mail} alt="email" className="email" />
               <input type="text" placeholder="username" className="name" />
             </div>
             <div className="second-input">
