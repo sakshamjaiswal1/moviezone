@@ -1,7 +1,11 @@
 .feed {
   display: flex;
-  padding-top: 40px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
+
 
 .feed > h3 {
   display: flex;
@@ -15,7 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   cursor: pointer;
 }
 

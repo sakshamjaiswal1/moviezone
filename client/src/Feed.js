@@ -8,23 +8,24 @@ import A5 from "./Album/A5.jpg";
 
 function Feed() {
   return (
+    
     <div className="feed">
-      <h3>Recommended Movies</h3>
+   
       <div className="post">
         <img src={A1} alt="" width={240} height={360} title="Liger" />
-        {/* <h4>Liger</h4> */}
+        <h4>Liger</h4>
       </div>
       <div className="post">
         <img src={A2} alt="" width={240} height={360} title="Karthikeya" />
-        {/* <h4>Karthikeya</h4> */}
+        <h4>Karthikeya</h4>
       </div>
       <div className="post">
         <img src={A3} alt="" width={240} height={360} title="DragonBall" />
-        {/* <h4>DragonBall</h4> */}
+        <h4>DragonBall</h4>
       </div>
       <div className="post">
         <img src={A4} alt="" width={240} height={360} title="RakshaBandhan" />
-        {/* <h4>RakshaBandhan</h4> */}
+        <h4>RakshaBandhan</h4>
       </div>
       <div className="post">
         <img
@@ -34,7 +35,7 @@ function Feed() {
           height={360}
           title="Laal Singh Chaddha"
         />
-        {/* <h4>Laal Singh Chaddha</h4> */}
+        <h4>Laal Singh Chaddha</h4>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import Feed from "./Feed";
 import Footer from "./Footer";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import BrowsePage from "./BrowsePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" exact element={<Feed />} />
           <Route path="/login" element={<LoginUi />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/browsepage" element={<BrowsePage />} />
         </Routes>
         <Banner />
         <Footer />

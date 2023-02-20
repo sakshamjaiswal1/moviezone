@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "./Sidebar.css";
 
@@ -9,39 +10,38 @@ function Sidebar() {
           Movies
         </a>
         <a href="" className="sidebar__options1">
-          Stream
-        </a>
+          Stream{" "}
+        </a>{" "}
         <a href="" className="sidebar__options1">
-          Events
-        </a>
+          Events{" "}
+        </a>{" "}
         <a href="" className="sidebar__options1">
-          Plays
-        </a>
+          Plays{" "}
+        </a>{" "}
         <a href="" className="sidebar__options1">
-          Sports
-        </a>
+          Sports{" "}
+        </a>{" "}
         <a href="" className="sidebar__options1">
-          Activities
-        </a>
+          Activities{" "}
+        </a>{" "}
         <a href="" className="sidebar__options1">
-          Buzz
-        </a>
-      </div>
-
+          Buzz{" "}
+        </a>{" "}
+      </div>{" "}
       <div className="sidebar__right">
         <a href="" className="sidebar__options2">
-          ListYourShow
-        </a>
+          ListYourShow{" "}
+        </a>{" "}
         <a href="" className="sidebar__options2">
-          Corporates
-        </a>
+          Corporates{" "}
+        </a>{" "}
         <a href="" className="sidebar__options2">
-          Offers
-        </a>
+          Offers{" "}
+        </a>{" "}
         <a href="" className="sidebar__options2">
-          Gift Cards
-        </a>
-      </div>
+          Gift Cards{" "}
+        </a>{" "}
+      </div>{" "}
     </div>
   );
 }

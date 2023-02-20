@@ -4,10 +4,13 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const User = require("../server/model/user");
+const cors = require("cors");
+
 const JWT_SECRET = "fnvdnfvenfveoirejrneurncubgbebeyrnoenedbbecyebceobcoecybb";
 
 mongoose
-  .connect("mongodb://localhost:27017/login-app-db", {
+  .connect("mongodb://localhost:27017/moviezone", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -16,6 +19,7 @@ mongoose
 
 const port = process.env.port || 5001;
 const app = express();
+app.use(cors());
 // app.use('/',express.static(path.join(__dirname,'static')))
 app.use(bodyParser.json());
 
@@ -58,46 +62,42 @@ app.post("/api/register", async (req, res) => {
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username }).lean();
-if (!user) {
-  return res.json({ status: "error", error: "Invalid Username or Password" });
-}
+  if (!user) {
+    return res.json({ status: "error", error: "Invalid Username or Password" });
+  }
 
-if (await bcrypt.compare(password, user.password)) {
-  const token = jwt.sign({id:user._id,username:user.username},
-    JWT_SECRET
-  )
-  return res.json({ status: "ok", data: token });
-}
-  res.json({ status: "error",error:'Invalid Username or password' });
+  if (await bcrypt.compare(password, user.password)) {
+    const token = jwt.sign({ id: user._id, username: user.username }, JWT_SECRET);
+    return res.json({ status: "ok", data: token });
+  }
+  res.json({ status: "error", error: "Invalid Username or password" });
 });
-app.post('/api/change-password', async (req, res) => {
-	const { token, newpassword: plainTextPassword } = req.body
+app.post("/api/change-password", async (req, res) => {
+  const { token, newpassword: plainTextPassword } = req.body;
   if (!plainTextPassword || typeof plainTextPassword !== "string") {
     return res.json({ status: "error", error: "Invalid Password" });
   }
   if (plainTextPassword.length < 5) {
     return res.json({ status: "error", error: "Password too weak" });
   }
-try{
-	const user = jwt.verify(token, JWT_SECRET)
-    console.log(user)
-    const _id = user.id
-    const password= await bcrypt.hash(plainTextPassword,10)
-    await User.updateOne({_id},{
-      $set:{password:password}
-    })
+  try {
+    const user = jwt.verify(token, JWT_SECRET);
+    console.log(user);
+    const _id = user.id;
+    const password = await bcrypt.hash(plainTextPassword, 10);
+    await User.updateOne(
+      { _id },
+      {
+        $set: { password: password },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    res.json({ status: "error", error: "security error" });
+  }
 
-}catch(error){
-
-console.log(error)
-res.json({status:'error',error:'security error'})
-}
-
-	
-res.json({status:'ok'})
-
-	
-})
+  res.json({ status: "ok" });
+});
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
 });

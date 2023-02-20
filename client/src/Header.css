@@ -25,6 +25,10 @@
   position: relative;
   left: 30px;
 }
+.searchIcon:hover {
+  cursor: pointer;
+}
+
 .header__left {
   display: flex;
   flex: 5;

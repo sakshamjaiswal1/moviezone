@@ -4,25 +4,21 @@
   display: flex;
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #D6DFDE;
+  background-color: #d6dfde;
 }
 .sub-main {
   display: flex;
   justify-content: center;
   height: 550px;
   width: 35%;
-  box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+  box-shadow: 3px 3px 30px 4px rgb(167, 167, 167);
   padding-top: 30px;
-  border-radius: 60px;
-  background-color: white;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #74c34b -181.69%, #edf2ff 40.16%, #ffffff 100%);
 }
-.imgs {
-  padding-top: 20px;
-  justify-content: center;
-  display: flex;
-}
+
 .container-image {
-  background-color: rgb(223, 221, 221);
+  background-color: transparent;
   border-radius: 150px;
   align-items: center;
   display: flex;
@@ -39,11 +35,10 @@
 input {
   width: 300px;
   height: 50px;
-  border-radius: 60px;
-  box-shadow: inset 0px 0px 25px 0px #888;
+  border-radius: 12px;
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .email {
@@ -57,20 +52,34 @@ input {
   padding-left: 70px;
   font-size: 20px;
 }
-.second-input {
+.second_input {
   padding-top: 20px;
 }
 
 button {
   width: 380px;
   height: 50px;
-  border-radius: 60px;
-  background-color: lightcoral;
+  border-radius: 0px;
+  background-color: #808080;
   color: white;
   font-size: 25px;
   border: none;
   cursor: pointer;
 }
 .login-button {
-  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.link_Signup {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
